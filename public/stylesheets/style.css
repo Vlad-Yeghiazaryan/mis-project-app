@@ -1,0 +1,39 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 1.5em;
+}
+#emailAdsBox {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+#mainTitle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#emailAdsLabel {
+  margin-left: 0.5em;
+}
+#formSubmit {
+  margin-bottom: 1em;
+}
+#student_table {
+  background-color: #fff;
+}
+a {
+  color: #00B7FF;
+}
+.form-row {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+#seasonOption {
+  font-size: small;
+}
+
+@media (min-width: 766px) {
+  #form {
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 5%;
+  }
+}

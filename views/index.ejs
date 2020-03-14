@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title><%= title %></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+				shrink-to-fit=no">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link href="/stylesheets/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<!-- Page Head -->
+			<h1 id="mainTitle"><%= title %></h1>
+			<p>Welcome to the Database viewer</p>
+
+			<!-- Form for students -->
+			<form action="/" method="post" id="form" class="mt-4">
+				<div id="formRow_1" class="form-row">
+					<div class="form-group col-12">
+						<label for="inputName">Name</label>
+						<input type="text" class="form-control" id="inputName" placeholder="John Doe" required>
+					</div>
+				</div>
+				<div id="formRow_2" class="form-row">
+					<div class="form-group col-4">
+						<label for="inputAge">Age</label>
+						<input type="number" class="form-control" id="inputAge" placeholder="22" required>
+					</div>
+					<div class="form-group col-8">
+						<label for="inputProgram">Program/Department</label>
+						<input type="text" class="form-control" id="inputProgram" placeholder="BAB" required>
+					</div>
+				</div>
+				<div id="formRow_3" class="form-row">
+					<div class="form-group col-7">
+						<label for="inputSeason">Favourite Season</label>
+						<select id="selectSeason" class="form-control" name="Season" required>
+							<option id="seasonOption" value="" disabled selected>Choose Season</option>
+							<option value="spring">Spring</option>
+							<option value="summer">Summer</option>
+							<option value="fall">Fall</option>
+							<option value="winter">Winter</option>
+						</select>
+					</div>
+					<div class="form-group col-5">
+						<label for="inputColor">Favourite Color</label>
+						<input type="color" class="form-control" id="inputColor" placeholder="Choose Color">
+					</div>
+				</div>
+				<div id="emailAdsBox" class="form-group">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="sendEmailAds">
+						<label id="emailAdsLabel" class="form-check-label" for="gridCheck">
+							Send me useless emails
+						</label>
+					</div>
+				</div>
+				<button id="formSubmit" type="submit" class="btn btn-primary">Submit</button>
+			</form> <!-- Form ends here -->
+
+			<!--Table-->
+			<div class="table-responsive">
+				<table class="table table-bordered table-striped" id='student_table'>
+				</table>
+			</div>
+			<script data-main="/javascripts/requirejsConfig" src="/javascripts/libraries/require.js">
+			</script>
+			<script>
+				require(['requirejsConfig'], () => {
+					require(['../script'])
+				})
+			</script>
+		</div>
+	</body>
+
+</html>
