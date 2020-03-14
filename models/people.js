@@ -34,7 +34,7 @@ const modelattributes = {
 
 async function People () {
   await PPL.init(modelattributes, modelOptions)
-  await PPL.sync()
+  await PPL.sync({ force: true })
   return PPL
 }
 
