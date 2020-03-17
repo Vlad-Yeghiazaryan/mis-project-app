@@ -1,6 +1,7 @@
 define([
   'makeTable',
   'send',
-  'form'
+  'form',
+  'refreshTable'
 ], () => {
 })

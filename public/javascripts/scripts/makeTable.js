@@ -1,8 +1,8 @@
 // Make a table from json
-const table = document.querySelector('#student_table')
-
-function makeTable (jsonData) {
+function makeTable (jsonData, tableDiv) {
   // Making the headers
+  const table = document.createElement('table')
+  table.setAttribute('class', 'table table-bordered table-striped')
   const tr = document.createElement('tr')
   Object.keys(jsonData[0]).forEach(key => {
     const th = document.createElement('th')
@@ -23,4 +23,5 @@ function makeTable (jsonData) {
     // making the record
     table.appendChild(tr)
   })
+  tableDiv.appendChild(table)
 }

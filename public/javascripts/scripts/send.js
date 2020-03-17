@@ -1,5 +1,5 @@
 function send (data) {
-  fetch('/', {
+  return fetch('/', {
     method: 'POST',
     headers: {
       Accept: 'application/json, text/plain, */*',
@@ -7,9 +7,4 @@ function send (data) {
     },
     body: JSON.stringify(data)
   })
-    .then(res => res.json())
-    .then(data => {
-      makeTable(data)
-      console.log(data)
-    })
 }

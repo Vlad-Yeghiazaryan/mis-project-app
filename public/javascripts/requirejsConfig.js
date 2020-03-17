@@ -3,6 +3,7 @@ requirejs.config({
   paths: {
     makeTable: 'makeTable',
     send: 'send',
-    form: 'formEvent'
+    form: 'formEvents',
+    refreshTable: 'refreshTable'
   }
 })

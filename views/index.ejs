@@ -48,7 +48,7 @@
 					</div>
 					<div class="form-group col-5">
 						<label for="inputColor">Favourite Color</label>
-						<input type="color" class="form-control" id="inputColor" placeholder="Choose Color">
+						<input value="#000000" type="color" class="form-control" id="inputColor" placeholder="Choose Color">
 					</div>
 				</div>
 				<div id="emailAdsBox" class="form-group">
@@ -59,13 +59,19 @@
 						</label>
 					</div>
 				</div>
-				<button id="formSubmit" type="submit" class="btn btn-primary">Submit</button>
+				<div id="formRow_4" class="form-row">
+					<div class="form-group col-7">
+						<button id="formSubmit" type="submit" class="btn btn-primary">Submit</button>	
+					</div>
+					<div class="form-group col-5">
+						<button id="formRefresh" class="btn btn-secondary">Refresh Table</button>	
+					</div>
+					</div>
+				</div>
 			</form> <!-- Form ends here -->
 
 			<!--Table-->
-			<div class="table-responsive">
-				<table class="table table-bordered table-striped" id='student_table'>
-				</table>
+			<div id='student_table' class="table-responsive">
 			</div>
 			<script data-main="/javascripts/requirejsConfig" src="/javascripts/libraries/require.js">
 			</script>
